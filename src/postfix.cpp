@@ -58,10 +58,10 @@ std::string infix2postfix(std::string infix) {
             }
             stack.pop();
         }
-        if (operation_priority(infix[i]) == 2 
+        if (operation_priority(infix[i]) == 2
             || operation_priority(infix[i]) == 3) {
             if (stack.isEmpty() ||
-                operation_priority(stack.get()) 
+                operation_priority(stack.get())
                 < operation_priority(infix[i])) {
                 stack.push(infix[i]);
             } else {
